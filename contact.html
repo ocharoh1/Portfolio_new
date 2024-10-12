@@ -3,137 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./home.css">
-      
-    <title>HOME PAGE</title>
+    <title>Contact - Maurice Ocharo</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color:yellow;">
+<body>
+    <header class="intro">
+        <h1>MAURICE OCHARO</h1>
+        <nav class="icons">
+            <a href="./home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="./resume.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </a>
+            <a href="./work.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Work</span>
+            </a>
+            <a href="./contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+            <button id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
 
-    <!-- NAVBAR -->
-     <div class="intro">
-        <p style="font-size: 30px">MAURICE OCHARO</p>
-     <i class="fa-solid fa-moon"></i>
-     </div>
-
-
-     <div class="main-container">
-
-        <!-- container 1 -->
-      <div class="container-one">
-
-        <div class="content-in-one">
-            <img src="./images/profile.jpg" alt="">
-            <h1 style=" padding-left: 45px; font-size: 20px;">Maurice Michael</h1>
-            <p style=" padding-left: 50px;">Fullstack Developer</p>
-
+    <main class="main-container">
+        <section class="container-one">
+            <img src="./images/profile.jpg" alt="Maurice Michael" />
+            <h2>Maurice Michael</h2>
+            <p>Fullstack Developer</p>
             <div class="container0ne-socials">
-              
-            <!-- social media icons -->
-            <i class="fab fa-facebook"><a href=""></a></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>      
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            
-          </div>
-
-          <div class="details">
-            <p>Phone</p>
-            <p>123456789</p><hr>
-            <p>Email</p>
-            <p>michealocharo@gmail.com</p><hr>
-            <p>location</p>
-            <p>nairobi kenya</p>
-
-
+            <div class="details">
+                <p><i class="fas fa-phone"></i> 123456789</p>
+                <hr>
+                <p><i class="fas fa-envelope"></i> michealocharo@gmail.com</p>
+                <hr>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            </div>
             <button>Download Resume</button>
-          </div>
+        </section>
 
-      </div>
-
-      <!-- about me -->
-
-      <div class="main">
-
-        <div class="icons">
-
-            <a href="./resume.html"><i class="fab fa-twitter"></i></a>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>  
-
-        </div>
-
-        <div class="container-two">
-
-            <div class="about-me">
-                <h1 style="margin-bottom: 10px;">ABOUT ME <hr></h1>
-                <p>Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
-                    full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
-                    My journey in the world of web development has been nothing short of exhilarating, and 
-                    I constantly strive to enhance my skills and embrace emerging trends in the industry.</p>
-    
-            </div>
-            <!-- what i do -->
-    
-            <h2 style="margin-top: 20px; margin-bottom: 15px;">What I do!</h2>
-            <div class="what-i-do">
-                
-             <div class="web-development">
-                <h3>Web Development</h3>
-                <p>As a developer, I find myself most 
-                    captivated by the power and flexibility of 
-                    NEXT.js. I'm always eager to dive into new
-                    projects that leverage NEXT.js and 
-                    discover innovative ways to create fast, 
-                    scalable, and user-friendly applications.</p>
-            </div>
-    
-            <div class="app-development">
-                <h3>App Development 💻</h3>
-                <p>With a focus on user-centric design and
-                    cutting-edge technologies, I thrive on 
-                    building intuitive and efficient apps 
-                    that make a positive impact on people's 
-                    lives. Let's turn ideas into reality and 
-                    shape the future together.</p>
-            </div>
-            </div>
-    
-            <div class="what-i-do-two">
-                
-                <div class="web-development">
-                    <h3>Web Development</h3>
-                    <p>As a developer, I find myself most 
-                        captivated by the power and flexibility of 
-                        NEXT.js. I'm always eager to dive into new
-                        projects that leverage NEXT.js and 
-                        discover innovative ways to create fast, 
-                        scalable, and user-friendly applications.</p>
+        <section class="container-two">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-        
-                <div class="app-development">
-                    <h3>App Development 💻</h3>
-                    <p>With a focus on user-centric design and
-                        cutting-edge technologies, I thrive on 
-                        building intuitive and efficient apps 
-                        that make a positive impact on people's 
-                        lives. Let's turn ideas into reality and 
-                        shape the future together.</p>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
-          </div>
-    
-          
-        </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="status-message"></div>
+        </section>
+    </main>
 
-      </div>
-
-    
-     
-     
-      
+    <script src="contact.js"></script>
 </body>
 </html>

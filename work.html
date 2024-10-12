@@ -5,129 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maurice Ocharo - Work</title>
     <link rel="stylesheet" href="work.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="intro">
+    <header class="intro">
         <h1>MAURICE OCHARO</h1>
-        <div class="icons">
+        <nav class="icons">
             <a href="./home.html" class="nav-item">
                 <i class="fas fa-home"></i>
-                Home
+                <span>Home</span>
             </a>
             <a href="./resume.html" class="nav-item">
                 <i class="fas fa-file-alt"></i>
-                Resume
+                <span>Resume</span>
             </a>
             <a href="./work.html" class="nav-item">
                 <i class="fas fa-briefcase"></i>
-                Work
+                <span>Work</span>
             </a>
             <a href="./contact.html" class="nav-item">
                 <i class="fas fa-envelope"></i>
-                Contact
+                <span>Contact</span>
             </a>
-            <button id="darkModeToggle" class="nav-item">
-                <i class="fas fa-moon"></i>
-                Theme
-            </button>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="main-container" role="main">
-        <div class="container-one">
-            <img src="./images/profile.jpg" alt="Maurice Michael">
-            <h2>Maurice Michael</h2>
-            <p>Fullstack Developer</p>
-            
+    <main class="main-container">
+        <aside class="container-one">
+            <div class="profile-section">
+                <img src="./images/profile.jpg" alt="Maurice Michael" class="profile-image">
+                <h2 class="profile-name">Maurice Michael</h2>
+                <p class="profile-title">Fullstack Developer</p>
+            </div>
+
             <div class="container0ne-socials">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
-            
+
             <div class="details">
-                <p><strong>Phone:</strong> 123456789</p>
-                <hr>
-                <p><strong>Email:</strong> michealocharo@gmail.com</p>
-                <hr>
-                <p><strong>Location:</strong> Nairobi, Kenya</p>
+                <div class="detail-item">
+                    <i class="fas fa-phone detail-icon"></i>
+                    <span>123456789</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope detail-icon"></i>
+                    <span>michealocharo@gmail.com</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt detail-icon"></i>
+                    <span>Nairobi, Kenya</span>
+                </div>
             </div>
-            
-            <button>Download Resume</button>
-        </div>
 
-        <div class="container-two">
+            <button class="download-btn">Download Resume</button>
+        </aside>
+
+        <section class="container-two">
             <h2>Portfolio</h2>
-            
-            <div class="portfolio-filter">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">App Development</button>
-                <button class="filter-btn">Web Development</button>
-                <button class="filter-btn">Design</button>
-                <button class="filter-btn">Mentorship</button>
-            </div>
-
             <div class="portfolio-grid">
-                <div class="portfolio-item" category="app">
-                    <div class="portfolio-content">
-                        <img src="./images/smart-bank-app.jpg" alt="Smart Bank App">
-                        <div class="portfolio-overlay">
-                            <h3>Smart Bank App</h3>
-                            <p>A modern banking application built with React Native, featuring seamless transactions and intuitive UI.</p>
-                            <a href="#" class="project-btn">View Project</a>
-                        </div>
+                <div class="portfolio-item">
+                    <img src="./images/farmer.jpg" alt="Smart Bank App" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Smart Bank App</h3>
+                        <p>A modern banking application built with React Native, featuring seamless transactions and intuitive UI.</p>
+                        <a href="https://example.com/smart-bank-app" class="project-btn" target="_blank">View Project</a>
                     </div>
                 </div>
-
-                <div class="portfolio-item" category="web">
-                    <div class="portfolio-content">
-                        <img src="./images/blog.jpg" alt="NEXT.js Blog">
-                        <div class="portfolio-overlay">
-                            <h3>NEXT.js Blog</h3>
-                            <p>A high-performance blog platform built with Next.js, featuring server-side rendering and dynamic content.</p>
-                            <a href="#" class="project-btn">View Project</a>
-                        </div>
+                <div class="portfolio-item">
+                    <img src="./images/nextjs-blog.jpg" alt="NEXT.js Blog" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>NEXT.js Blog</h3>
+                        <p>A high-performance blog platform built with Next.js, featuring server-side rendering and dynamic content.</p>
+                        <a href="https://example.com/nextjs-blog" class="project-btn" target="_blank">View Project</a>
                     </div>
                 </div>
-
-                <div class="portfolio-item" category="web">
-                    <div class="portfolio-content">
-                        <img src="./images/rental.jpg" alt="Rental Website">
-                        <div class="portfolio-overlay">
-                            <h3>Rental Website</h3>
-                            <p>A comprehensive rental property platform with advanced search and filtering capabilities.</p>
-                            <a href="#" class="project-btn">View Project</a>
-                        </div>
+                <div class="portfolio-item">
+                    <img src="./images/rental-website.jpg" alt="Rental Website" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Rental Website</h3>
+                        <p>A comprehensive rental property platform with advanced search and filtering capabilities.</p>
+                        <a href="https://example.com/rental-website" class="project-btn" target="_blank">View Project</a>
                     </div>
                 </div>
-
-                <div class="portfolio-item" category="mentorship">
-                    <div class="portfolio-content">
-                        <img src="./images/tech-mentor.jpg" alt="Tech Mentor">
-                        <div class="portfolio-overlay">
-                            <h3>Tech Mentor</h3>
-                            <p>An online platform connecting aspiring developers with experienced mentors in the tech industry.</p>
-                            <a href="#" class="project-btn">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" category="design">
-                    <div class="portfolio-content">
-                        <img src="./images/ideaflow.jpg" alt="IdeaFlow">
-                        <div class="portfolio-overlay">
-                            <h3>IdeaFlow</h3>
-                            <p>A creative brainstorming tool designed to help teams collaborate and visualize ideas effectively.</p>
-                            <a href="#" class="project-btn">View Project</a>
-                        </div>
+                <div class="portfolio-item">
+                    <img src="./images/tech-mentor.jpg" alt="Tech Mentor" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Tech Mentor</h3>
+                        <p>An online platform connecting aspiring developers with experienced mentors in the tech industry.</p>
+                        <a href="https://example.com/tech-mentor" class="project-btn" target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        </section>
+    </main>
 </body>
 </html>
