@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
+    const contactForm = document.getElementById('contact-form');
+    const statusMessage = document.getElementById('status-message');
 
     // Check if dark mode preference is stored in localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
         body.classList.add('dark-mode');
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i><span>Light</span>';
     }
 
     darkModeToggle.addEventListener('click', () => {
@@ -13,15 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'enabled');
-            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i><span>Light</span>';
         } else {
             localStorage.setItem('darkMode', 'disabled');
-            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i><span>Dark</span>';
         }
     });
 
     // Form submission handler
-    const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -42,13 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 // Clear form fields after successful submission
                 contactForm.reset();
-                alert('Message sent successfully!');
+                statusMessage.textContent = 'Message sent successfully!';
+                statusMessage.className = 'success';
             } else {
                 throw new Error('Failed to send message');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Failed to send message. Please try again later.');
+            statusMessage.textContent = 'Failed to send message. Please try again later.';
+            statusMessage.className = 'error';
         }
+
+        // Clear status message after 5 seconds
+        setTimeout(() => {
+            statusMessage.textContent = '';
+            statusMessage.className = '';
+        }, 5000);
     });
 });

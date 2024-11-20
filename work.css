@@ -25,7 +25,6 @@ body {
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
   line-height: 1.6;
-  overflow: hidden;
 }
 
 body.dark-mode {
@@ -54,7 +53,7 @@ body.dark-mode {
 
 .main-container {
   display: flex;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   margin-top: 60px;
   overflow: hidden;
 }
@@ -136,7 +135,7 @@ body.dark-mode {
   color: var(--primary-dark);
 }
 
-img {
+.profile-image {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -146,7 +145,7 @@ img {
   border: 5px solid var(--primary-light);
 }
 
-.dark-mode img {
+.dark-mode .profile-image {
   border-color: var(--primary-dark);
 }
 
@@ -213,17 +212,20 @@ h1, h2, h3 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  
 }
 
 .portfolio-item {
-  position: relative;
-  border-radius: 12px;
+  background-color: var(--container-light);
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+}
+
+.dark-mode .portfolio-item {
+  background-color: var(--container-dark);
 }
 
 .portfolio-item:hover {
@@ -235,53 +237,61 @@ h1, h2, h3 {
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
-.portfolio-image {
+.portfolio-image-container {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  position: relative;
+  overflow: hidden;
 }
 
-.portfolio-overlay {
+.portfolio-image {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-content {
   padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-overlay h3 {
+.portfolio-content h3 {
   margin-bottom: 10px;
+  color: var(--primary-light);
 }
 
-.portfolio-overlay p {
-  text-align: center;
+.dark-mode .portfolio-content h3 {
+  color: var(--primary-dark);
+}
+
+.portfolio-content p {
   margin-bottom: 15px;
+  font-size: 0.9rem;
 }
 
 .project-btn {
+  display: inline-block;
   background-color: var(--primary-light);
-  color: #fff;
+  color: white;
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.dark-mode .project-btn {
+  background-color: var(--primary-dark);
 }
 
 .project-btn:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--secondary-light);
+}
+
+.dark-mode .project-btn:hover {
+  background-color: var(--secondary-dark);
 }
 
 @media (max-width: 1200px) {
