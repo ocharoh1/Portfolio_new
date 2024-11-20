@@ -6,7 +6,7 @@
     <title>Maurice Ocharo - Portfolio</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="intro">
@@ -28,39 +28,33 @@
                 <i class="fas fa-envelope"></i>
                 <span>Contact</span>
             </a>
+            <a href="path/to/your/document.pdf" download="Resume.pdf" class="nav-item">
+                <i class="fas fa-download"></i>
+                <span>Download CV</span>
+            </a>
             <button id="darkModeToggle" class="nav-item">
                 <i class="fas fa-sun"></i>
-                <span></span>
+                <span>Dark</span>
             </button>
         </nav>
     </header>
 
     <main class="main-container">
-
         <aside class="container-one">
             <img src="./images/profile.jpg" alt="Maurice Michael">
             <h2>Maurice Michael</h2>
-            <p>Fullstack Developer</p>
-            <div class="container0ne-socials">
+            <p class="job-title">Fullstack Developer</p>
+            <div class="container-one-socials">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="details">
-                <p><strong>Phone:</strong> 123456789</p>
-                <hr>
-                <p><strong>Email:</strong> michealocharo@gmail.com</p>
-                <hr>
-                <p><strong>Location:</strong> Nairobi, Kenya</p>
-            </div>
-            <button>Download Resume</button>
+                <p><strong>Phone:</strong> 0797254329</p>
+                <p><a href="mailto:maurice@example.com">michealocharo@gmail.com</a></p>
 
-            <a href="path/to/your/document.pdf" download="Resume.pdf">
-                <button>Download Resume</button>
-              </a>
-              
+            </div>
         </aside>
 
         <section class="container-two">
@@ -72,29 +66,42 @@
             <h2>What I do!</h2>
 
             <div class="what-i-do">
-                <div class="web-development">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
                     <h3>Web Development</h3>
                     <p>As a developer, I find myself most captivated by the power and flexibility of NEXT.js. I'm always eager to dive into new projects that leverage NEXT.js and discover innovative ways to create fast, scalable, and user-friendly applications.</p>
                 </div>
 
-                <div class="app-development">
-                    <h3>App Development 💻</h3>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>App Development</h3>
                     <p>With a focus on user-centric design and cutting-edge technologies, I thrive on building intuitive and efficient apps that make a positive impact on people's lives. Let's turn ideas into reality and shape the future together.</p>
                 </div>
-
-                <!-- sec two of what i do -->
-                <div class="web-development">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>As a developer, I find myself most captivated by the power and flexibility of NEXT.js. I'm always eager to dive into new projects that leverage NEXT.js and discover innovative ways to create fast, scalable, and user-friendly applications.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
                     <h3>Web Development</h3>
                     <p>As a developer, I find myself most captivated by the power and flexibility of NEXT.js. I'm always eager to dive into new projects that leverage NEXT.js and discover innovative ways to create fast, scalable, and user-friendly applications.</p>
                 </div>
 
-                <div class="app-development">
-                    <h3>App Development 💻</h3>
-                    <p>With a focus on user-centric design and cutting-edge technologies, I thrive on building intuitive and efficient apps that make a positive impact on people's lives. Let's turn ideas into reality and shape the future together.</p>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend Development</h3>
+                    <p>I specialize in creating robust and scalable backend systems using Node.js and Express. From RESTful APIs to database management, I ensure the server-side of applications runs smoothly and efficiently.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>Proficient in both SQL and NoSQL databases, I design and optimize database structures to ensure efficient data storage and retrieval. I work with MySQL, PostgreSQL, MongoDB, and more to suit various project needs.</p>
                 </div>
             </div>
         </section>
     </main>
-    <script src="./script.js" ></script>
+    <script src="./script.js"></script>
 </body>
 </html>
