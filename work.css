@@ -25,6 +25,7 @@ body {
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
   line-height: 1.6;
+  overflow: hidden;
 }
 
 body.dark-mode {
@@ -53,7 +54,7 @@ body.dark-mode {
 
 .main-container {
   display: flex;
-  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   margin-top: 60px;
   overflow: hidden;
 }
@@ -239,7 +240,7 @@ h1, h2, h3 {
 
 .portfolio-image-container {
   width: 100%;
-  padding-top: 75%; /* 4:3 Aspect Ratio */
+  padding-top: 75%;
   position: relative;
   overflow: hidden;
 }
