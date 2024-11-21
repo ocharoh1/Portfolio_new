@@ -25,7 +25,7 @@ body {
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
   line-height: 1.6;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -312,10 +312,15 @@ button[type="submit"]:hover {
 
   .container-one {
     padding-bottom: 30px;
+    flex: 0 0 auto;
   }
 
   .container-two {
     padding-top: 30px;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }
 
@@ -325,14 +330,44 @@ button[type="submit"]:hover {
     text-align: center;
     gap: 20px;
     position: static;
+    padding: 10px;
   }
 
   .icons {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
   }
 
   .main-container {
     margin-top: 0;
+    padding: 0 10px;
+  }
+
+  #contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 10px 5px;
+  }
+
+  .nav-item {
+    font-size: 0.7rem;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
   }
 }
